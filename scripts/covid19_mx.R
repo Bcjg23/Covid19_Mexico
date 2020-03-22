@@ -3,19 +3,19 @@
 #Link para Comunicado Tecnico
 #https://www.gob.mx/salud/documentos/informacion-internacional-y-nacional-sobre-nuevo-coronavirus-2019-ncov
 
-setwd("~/Documents/covid19_mx")
-path_in <- '~/Documents/covid19_mx/Data/'
-path_out <-'~/Documents/covid19_mx/Output/'
-path_img <-'~/Documents/covid19_mx/Images/'
+setwd("~/Documents/covid19_mx") # setwd("~/github/Covid19_Mexico")
+path_in <- '~/Documents/covid19_mx/Data/' # path_in <- '~/github/Covid19_Mexico/data/'
+path_out <-'~/Documents/covid19_mx/Output/' # path_out <-'~/github/Covid19_Mexico/output/'
+path_img <-'~/Documents/covid19_mx/Images/' # path_img <-'~/github/Covid19_Mexico/imagenes/'
 
 library(tidyverse)
 library(ggplot2)
 #library(dplyr)
 library(hrbrthemes)
-
+if(!require(forcats)) install.packages("forcats", repos = "http://cran.us.r-project.org")
 
 # Confirmados por fecha a nivel estatal
-confirmados <- read.csv('confirmados_20_03_2020.csv', encoding="UTF-8", stringsAsFactors=FALSE)
+confirmados <- read.csv('output/confirmados_20_03_2020.csv', encoding="UTF-8", stringsAsFactors=FALSE)
 confirmados$fecha_de_corte <- as.Date(confirmados$fecha_de_corte, format = "%d/%m/%Y" )
 confirmados$fecha_de_inicio_de_sintomas <- as.Date(confirmados$fecha_de_inicio_de_sintomas, format = "%d/%m/%Y" )
 confirmados$fecha_de_llegada_a_mexico <- as.Date(confirmados$fecha_de_llegada_a_mexico, format = "%d/%m/%Y" )
@@ -58,7 +58,7 @@ ggplot(confirmados_nacional,
   geom_line(color="red") + geom_point(shape=21, color="gray", fill="#c0392b", size=6) +
   geom_text(vjust = 0, nudge_y = 1.5) + scale_x_date(date_breaks = "1 day") +
   theme_ipsum()  + 
-  labs(title="Número de *nuevos* casos confirmados de COVID-19 en México por día", 
+  labs(title="Número de *nuevos* casos confirmados de COVID-19\n en México por día", 
        subtitle=paste0("Fecha de corte: ", fecha_actualizacion,"\nTotal: ", as.character(sum(confirmados_nacional$nuevos_casos))),
        caption="Elaboración propia con datos de la Secretaría de Salud",
        x="",
@@ -148,19 +148,55 @@ ggsave(filename = paste0(path_img, "04_total_por_edad_", str_replace_all(fecha_a
        width = 10, height = 8, dpi = 100)
 
 
-################  Distribucion de casos totales por Estado ###################
+# Propuesta de rangos de edad, empleados en el comparativo de edades de Corea del Sur de Statista
 
-confirmados_estado <- confirmados %>% group_by(estado) %>% summarise(confirmados=n())
-confirmados_estado <- arrange(confirmados_estado, desc(confirmados))
+bks <- c(0,10,20,30,40,50,60,70,80, Inf)
+lbs <- c('0-9','10-19','20-29','30-39','40-49','50-59','60-69','70-79', '+79')
+confirmados$bins_edad <- cut(confirmados$edad, breaks = bks, labels = lbs, include.lowest=TRUE)
 
-ggplot(confirmados_estado,
-       aes(x=estado,
+confirmados_edad <- confirmados %>% group_by(bins_edad) %>% summarise(confirmados = n())
+
+ggplot(confirmados_edad,
+       aes(x=bins_edad,
            y=confirmados)) +
   geom_bar(stat="identity", fill="#45b39d", alpha=.6, width=.4) +
   coord_flip() +
   geom_text(aes(label=confirmados), hjust=-0.2, size=3.5) +
   theme_ipsum(axis = 'X')+
-  labs(title="Distribucion por estado", 
+  labs(title="Distribucion por rango de edad", 
+       subtitle=paste0("Fecha de corte: ", fecha_actualizacion,"\nTotal: ", as.character(sum(confirmados_nacional$nuevos_casos))),
+       caption="Elaboración propia con datos de la Secretaría de Salud",
+       x="",
+       y="") +
+  theme(plot.title = element_text(size = 20, face = "bold"),
+        plot.subtitle = element_text(size =15 ),
+        plot.caption = element_text(size = 12),
+        strip.text = element_text(size = 14),
+        panel.spacing.x = unit(3, "lines"),
+        text = element_text(family = "Arial Narrow"),
+        axis.text.x = element_text(size = 12, hjust = 1, color = 'white'),
+        axis.text.y = element_text(size = 10))
+
+ggsave(filename = paste0(path_img, "04_total_por_edad_v2_", str_replace_all(fecha_actualizacion, "-", "_"), ".png"),
+       width = 10, height = 8, dpi = 100)
+
+################  Distribucion de casos totales por Estado ###################
+
+confirmados_estado <- confirmados %>% group_by(estado) %>% summarise(confirmados=n())
+
+# Usando funcion fct_inorder() del paquete forcats, se crean factores ordenados por estado
+# los cuales se aprovechan para ordenar las graficas por estado
+
+confirmados_estado <- arrange(confirmados_estado, confirmados) %>% mutate(estado_ord = forcats::fct_inorder(estado))
+
+ggplot(confirmados_estado,
+       aes(x=estado_ord,
+           y=confirmados)) +
+  geom_bar(stat="identity", fill="#45b39d", alpha=.6, width=.4) +
+  coord_flip() +
+  geom_text(aes(label=confirmados), hjust=-0.2, size=3.5) +
+  theme_ipsum(axis = 'X')+
+  labs(title="Distribucion de casos confirmados por estado", 
        subtitle=paste0("Fecha de corte: ", fecha_actualizacion,"\nTotal: ", as.character(sum(confirmados_nacional$nuevos_casos))),
        caption="Elaboración propia con datos de la Secretaría de Salud",
        x="",
@@ -176,14 +212,13 @@ ggplot(confirmados_estado,
 ggsave(filename = paste0(path_img, "05_total_por_estado_", str_replace_all(fecha_actualizacion, "-", "_"), ".png"),
        width = 10, height = 8, dpi = 100)
 
-
-ggplot(confirmados_estado, aes(x=estado, y=confirmados, label =confirmados)) +
+ggplot( confirmados_estado, aes(x=estado_ord, y=confirmados, label =confirmados)) +
   geom_segment( aes(xend=estado, yend=0), color = "#45b39d") +
   geom_point( size = 4, color = "#45b39d") +
   coord_flip() +
-  geom_text(vjust = 0.5, nudge_y = 0.5) +
+  geom_text(vjust = 0.5, nudge_y = 1.5) +
   theme_ipsum(axis = 'X') +
-  labs(title="Distribucion por estado", 
+  labs(title="Distribucion de casos confirmados por estado", 
        subtitle=paste0("Fecha de corte: ", fecha_actualizacion,"\nTotal: ", as.character(sum(confirmados_nacional$nuevos_casos))),
        caption="Elaboración propia con datos de la Secretaría de Salud",
        x="",
@@ -196,8 +231,8 @@ ggplot(confirmados_estado, aes(x=estado, y=confirmados, label =confirmados)) +
         text = element_text(family = "Arial Narrow"),
         axis.text.x = element_text(size = 12, hjust = 1, color = 'white'),
         axis.text.y = element_text(size = 10))
-#ggsave(filename = paste0(path_img, "05_total_por_estado_", str_replace_all(fecha_actualizacion, "-", "_"), ".png"),
-#       width = 10, height = 8, dpi = 100)
+ggsave(filename = paste0(path_img, "05_total_por_estado_", str_replace_all(fecha_actualizacion, "-", "_"), ".png"),
+       width = 10, height = 8, dpi = 100)
 
 
 
