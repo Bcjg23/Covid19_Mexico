@@ -21,12 +21,14 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 # 3. Análisis
 
-![](imagenes/01_acumulados_2020_03_20.png)
+![](imagenes/01_casos_acumulados.png)
 
-![](imagenes/02_nuevos_2020_03_20.png)
+![](imagenes/02_nuevos_casos_2020_03_20.png)
 
-![](imagenes/03_total_por_sexo2020_03_20.png)
+![](imagenes/03_casos_por_sexo.png)
 
-![](imagenes/04_total_por_edad_2020_03_20.png)
+![](imagenes/04_casos_por_edad.png)
+
+![](imagenes/05_casos_por_estado.png)
 
 
