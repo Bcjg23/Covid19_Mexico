@@ -23,7 +23,7 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 ![](imagenes/01_casos_acumulados.png)
 
-![](imagenes/02_nuevos_casos_2020_03_20.png)
+![](imagenes/02_nuevos_casos.png)
 
 ![](imagenes/03_casos_por_sexo.png)
 
