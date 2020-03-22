@@ -10,7 +10,7 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 <img src="imagenes/folder_icon.png" width="20" height="15"/>  **output**: 
 
-   - Confirmados: Información públicada de los casos confirmados hasta el último corte, con la fecha en que cada uno de los casos fue publicado. Esta base es actualizada diariamente **de manera manual** para incluir los nuevos casos que da a conocer la Secretaría de Salud. Debido a esto podemos incurrir en errores propios o por parte de la misma Secretaría de Salud. 
+   - Confirmados: Información públicada de los casos confirmados hasta el último corte, con la fecha en que cada uno de los casos fue publicado. Esta base es actualizada diariamente *de manera manual* para incluir los nuevos casos que da a conocer la Secretaría de Salud. Debido a esto podemos incurrir en errores propios o por parte de la misma Secretaría de Salud. 
      
      De hecho, como menciona [@guzmart_](https://github.com/guzmart/covid19_mex) en un ejercicio similar, y corroborado por nosotros, los datos publicados el 20 de Marzo de 2020 toman como un nuevo caso a un paciente ya considerado en la información del día anterior.
 
