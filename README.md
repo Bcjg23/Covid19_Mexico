@@ -29,6 +29,10 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 ![](imagenes/04_casos_por_edad.png)
 
-![](imagenes/05_total_por_estado_2020_03_20.png)
+[//]: # (![](imagenes/05_casos_por_edad_sexo.png))
+
+![](imagenes/06_casos_por_estado.png)
+
+![](imagenes/07_casos_por_sexo_tiempo.png)
 
 
