@@ -1,0 +1,13 @@
+name: Covid19MX
+title: Covid19MX
+username:
+account: cfgf
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1985261
+bundleId: 2917627
+url: https://cfgf.shinyapps.io/Covid19MX/
+when: 1585049220.53365
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app.R
