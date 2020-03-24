@@ -33,6 +33,7 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 ![](imagenes/07_casos_por_sexo_tiempo.png)
 
+![](imagenes/08_casos_acumulados_latam.png)
 
 # 4. Errores de fuente
 
