@@ -41,8 +41,8 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 Las tablas de la Secretaria de Salud reportan diariamente las tablas de casos positivos en formato pdf, resaltando en color *azul* los *casos nuevos*. En esta sección se documentan errores en las versiones de las tablas.
 
-    - En la tabla del 20.03.2020 se marco el **caso 163** como caso nuevo, sin embargo este caso esta confirmado en la tabla del 19.03.2020 (**caso 149**)
-    - La tabla del 21-03-2020 no reporta en azul, es decir como casos nuevos, los **casos 226, 227, 228, 229**, pero estos casos no se encuentran en la tabla del 20.03.2020. Además, en la tabla del 20.03.2020 se reporta el **caso 225**, que *desaparece* en la tabla del 21.03.2020.
+   - En la tabla del 20.03.2020 se marco el **caso 163** como caso nuevo, sin embargo este caso esta confirmado en la tabla del 19.03.2020 (**caso 149**)
+   - La tabla del 21-03-2020 no reporta en azul, es decir como casos nuevos, los **casos 226, 227, 228, 229**, pero estos casos no se encuentran en la tabla del 20.03.2020. Además, en la tabla del 20.03.2020 se reporta el **caso 225**, que *desaparece* en la tabla del 21.03.2020.
 
 ### Actulizaciones de casos
 
