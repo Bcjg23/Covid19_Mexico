@@ -50,7 +50,7 @@ ggplot(df, aes(x = Date, y = ConfirmedCases,color = Country)) +
   #scale_y_continuous(sec.axis = sec_axis(~ ., breaks = d_ends)) + # Coloca numero de casos totales al final de la serie (lo quite por overplotting)
   theme_ipsum()  +
   labs(title="Número de casos confirmados de COVID-19 en paises\n de LATAM por día", 
-       subtitle=paste0("Total en estos paises: ", as.character(sum(df$ConfirmedCases)), "\nFecha de corte: ", today()),
+       subtitle=paste0("Total en estos paises: ", as.character(sum(df$ConfirmedCases)), "\nFecha de corte: ", df$Date[nrow(df)]),
        caption=caption_text,
        x="",
        y="") +
