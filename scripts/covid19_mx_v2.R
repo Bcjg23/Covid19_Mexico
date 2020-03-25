@@ -3,10 +3,10 @@
 #Link para Comunicado Tecnico
 #https://www.gob.mx/salud/documentos/informacion-internacional-y-nacional-sobre-nuevo-coronavirus-2019-ncov
 
-setwd("~/Documents/covid19_mx")
-path_in <- '~/Documents/covid19_mx/data/'
-path_out <-'~/Documents/covid19_mx/output/'
-path_img <-'~/Documents/covid19_mx/imagenes/'
+setwd("~/Documents/Covid19_Mexico/covid19_mx")
+path_in <- '~/Documents/Covid19_Mexico/covid19_mx/data/'
+path_out <-'~/Documents/Covid19_Mexico/covid19_mx/output/'
+path_img <-'~/Documents/Covid19_Mexico/covid19_mx/imagenes/'
 caption_text <- 'Fuente: Elaboración propia con datos de la Secretaría de Salud \n @Bcjg23 | @GutzCarlos | @czammar'
 
 library(tidyverse)
@@ -18,7 +18,7 @@ library(magrittr)
 
 
 # Confirmados por fecha a nivel estatal
-confirmados <- read.csv(paste0(path_out, 'confirmados_21_03_2020.csv'), encoding="UTF-8", stringsAsFactors=FALSE)
+confirmados <- read.csv(paste0(path_out, 'confirmados_23_03_2020.csv'), encoding="UTF-8", stringsAsFactors=FALSE)
 confirmados$fecha_de_corte <- as.Date(confirmados$fecha_de_corte, format = "%d/%m/%Y" )
 confirmados$fecha_de_inicio_de_sintomas <- as.Date(confirmados$fecha_de_inicio_de_sintomas, format = "%d/%m/%Y" )
 confirmados$fecha_de_llegada_a_mexico <- as.Date(confirmados$fecha_de_llegada_a_mexico, format = "%d/%m/%Y" )
