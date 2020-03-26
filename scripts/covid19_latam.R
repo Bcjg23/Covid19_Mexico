@@ -34,7 +34,7 @@ df$Date <-  mdy(df$Fecha)
 df <- df %>% filter(Country %in% c("Mexico","Colombia","Chile","Argentina","Brazil","Peru","Ecuador"))
 
 ## Filtro de fechas
-df <- df %>% filter(Fecha>='2020-03-15')
+df <- df %>% filter(Date>='2020-03-15')
 
 ## Etiquetas para el final de las series de tiempo
 d_ends <- df %>% group_by(Country) %>% top_n(1, ConfirmedCases) %>% pull(ConfirmedCases)
