@@ -24,7 +24,7 @@ df <-read_csv(url(urlfile))
 ## Reordenamos los datos para las graficas
 df <- df %>% select(-c(Lat,Long,`Province/State`)) %>% group_by(`Country/Region`) %>% summarise_all(funs(sum))
 ## Alargamos la tabla por Pais
-df <-gather(df, `1/22/20`:`3/23/20`,key='Fecha',value=ConfirmedCases)
+df <-gather(df, `1/22/20`:`3/25/20`,key='Fecha',value=ConfirmedCases)
 ## Renombramos columna
 df <- rename(df, Country=`Country/Region` )
 ## Transformamos la columna al formato de fecha adecuado
@@ -34,7 +34,7 @@ df$Date <-  mdy(df$Fecha)
 df <- df %>% filter(Country %in% c("Mexico","Colombia","Chile","Argentina","Brazil","Peru","Ecuador"))
 
 ## Filtro de fechas
-df <- df %>% filter(Fecha>='2020-02-15')
+df <- df %>% filter(Fecha>='2020-03-15')
 
 ## Etiquetas para el final de las series de tiempo
 d_ends <- df %>% group_by(Country) %>% top_n(1, ConfirmedCases) %>% pull(ConfirmedCases)
