@@ -67,7 +67,7 @@ ggplot(df_latam, aes(x = Date, y = ConfirmedCases,color = Country)) +
 #p <- ggplotly(p)
 
 ggsave(filename = paste0(path_img, "08_casos_acumulados_latam.png"),
-       width = 10, height = 8, dpi = 100)
+       width = 10, height = 8, dpi = 500)
 
 
 ## Paises para del comparativo global
@@ -102,4 +102,4 @@ ggplot(df_international, aes(x = Date, y = log(ConfirmedCases),color = Country))
         axis.text.y = element_text(size = 12))
 
 ggsave(filename = paste0(path_img, "09_casos_acumulados_international.png"),
-       width = 10, height = 8, dpi = 200)
+       width = 10, height = 8, dpi = 500)
