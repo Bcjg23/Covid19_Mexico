@@ -1,4 +1,4 @@
-n_caso,estado,sexo,edad,fecha_de_inicio_de_síntomas,identificacion_de_covid19,procedencia,fecha_de_llegada_a_mexico,fecha_de_corte
+n_caso,estado,sexo,edad,fecha_de_inicio_de_sintomas,identificacion_de_covid19,procedencia,fecha_de_llegada_a_mexico,fecha_de_corte
 1,CIUDAD DE MÉXICO,M,35,22/02/2020,confirmado,Italia,22/02/2020,27/02/2020
 2,SINALOA,M,41,22/02/2020,confirmado,Italia,21/02/2020,28/02/2020
 3,CIUDAD DE MÉXICO,M,59,23/02/2020,confirmado,Italia,22/02/2020,28/02/2020
