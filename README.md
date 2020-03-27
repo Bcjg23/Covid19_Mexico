@@ -37,6 +37,8 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 ![](imagenes/08_casos_acumulados_latam.png)
 
+![](imagenes/09_casos_acumulados_international.png)
+
 # 4. Errores de fuente
 
 ## Tabla de positivos
