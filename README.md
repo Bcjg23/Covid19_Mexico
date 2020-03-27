@@ -50,5 +50,9 @@ Las tablas de la Secretaria de Salud reportan diariamente las tablas de casos po
 
    - En la tabla del 20.03.2020 se actualizó el número de caso 67
    - En la tabla 21.03.2020 se actualizó el número de caso 64
-   - La tabla del 23.03.2020 se actualizaron los *países de residencia* de los casos 167, 143, 311 y la *edad* del caso 311
-   - En la tabla del 24.03.2020 se actualizo la edad del caso *253*
+   - La tabla del 23.03.2020 se actualizaron los *países de procedencia* de los casos 167, 143, 311 y la *edad* del caso 311
+   - En 
+   la tabla del 24.03.2020 se actualizo la edad del caso *253*
+   - En la tabla 26.03.2020 se actualizo el *país de procedencia* para el caso *201*, para el caso *240* se actualizo la *edad*. Posibles defunciones: casos 340 y 302 de la tabla 25.06.2020
+   
+   
