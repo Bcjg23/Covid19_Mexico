@@ -24,7 +24,7 @@ df <-read_csv(url(urlfile))
 ## Reordenamos los datos para las graficas
 df <- df %>% select(-c(Lat,Long,`Province/State`)) %>% group_by(`Country/Region`) %>% summarise_all(funs(sum))
 ## Alargamos la tabla por Pais
-df <-gather(df, `1/22/20`:`3/25/20`,key='Fecha',value=ConfirmedCases)
+df <-gather(df, `1/22/20`:`3/26/20`,key='Fecha',value=ConfirmedCases)
 ## Renombramos columna
 df <- rename(df, Country=`Country/Region` )
 ## Transformamos la columna al formato de fecha adecuado
