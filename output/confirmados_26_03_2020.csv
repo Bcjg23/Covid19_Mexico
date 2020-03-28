@@ -1,4 +1,4 @@
-n_caso,estado,sexo,edad,fecha_de_inicio_de_sintomas,identificacion_de_covid19,procedencia,fecha_de_llegada_a_mexico,fecha_de_corte
+n_caso,estado,sexo,edad,fecha_de_inicio_de_síntomas,identificacion_de_covid19,procedencia,fecha_de_llegada_a_mexico,fecha_de_corte
 1,CIUDAD DE MÉXICO,M,35,22/02/2020,confirmado,Italia,22/02/2020,27/02/2020
 2,SINALOA,M,41,22/02/2020,confirmado,Italia,21/02/2020,28/02/2020
 3,CIUDAD DE MÉXICO,M,59,23/02/2020,confirmado,Italia,22/02/2020,28/02/2020
@@ -547,14 +547,11 @@ n_caso,estado,sexo,edad,fecha_de_inicio_de_sintomas,identificacion_de_covid19,pr
 546,JALISCO,F,19,17/03/2020,confirmado,Francia,11/03/2020,26/03/2020
 547,JALISCO,F,19,16/03/2020,confirmado,Estados Unidos,15/03/2020,26/03/2020
 548,BAJA CALIFORNIA,F,41,20/03/2020,confirmado,Estados Unidos,19/03/2020,26/03/2020
-549,"BAJA CALIFORNIA
-SUR",M,44,20/03/2020,confirmado,"Estados
-Unidos",14/03/2020,26/03/2020
+549,BAJA CALIFORNIA SUR,M,44,20/03/2020,confirmado,Estados Unidos,14/03/2020,26/03/2020
 550,BAJA CALIFORNIA,M,30,16/03/2020,confirmado,España,18/03/2020,26/03/2020
 551,PUEBLA,M,50,22/03/2020,confirmado,Contacto,NA,26/03/2020
 552,BAJA CALIFORNIA,F,64,13/03/2020,confirmado,Contacto,NA,26/03/2020
-553,"BAJA CALIFORNIA
-SUR",M,66,22/03/2020,confirmado,Estados Unidos,15/03/2020,26/03/2020
+553,BAJA CALIFORNIA SUR,M,66,22/03/2020,confirmado,Estados Unidos,15/03/2020,26/03/2020
 554,PUEBLA,F,60,16/03/2020,confirmado,Estados Unidos,11/03/2020,26/03/2020
 555,TABASCO,F,26,16/03/2020,confirmado,Contacto,NA,26/03/2020
 556,TABASCO,F,53,21/03/2020,confirmado,Contacto,NA,26/03/2020
