@@ -21,6 +21,8 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 # 3. Análisis
 
+## La Secretaría de Salud ha estado eliminando, sin motivo aparente, diversos registros. Por lo que los datos publicados aquí no coinciden con los números oficiales. 
+
 ![](imagenes/01_casos_acumulados.png)
 
 ![](imagenes/02_nuevos_casos.png)
@@ -39,7 +41,7 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 ![](imagenes/09_casos_acumulados_international.png)
 
-# 4. Errores de fuente
+# 4. Errores de la base
 
 ## Tabla de positivos
 
