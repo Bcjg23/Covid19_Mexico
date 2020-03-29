@@ -21,6 +21,8 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 # 3. Análisis
 
+### NOTA: La Secretaría de Salud ha estado eliminando, sin motivo aparente, diversos registros. Por lo que los datos publicados aquí no coinciden con los números oficiales. 
+
 ![](imagenes/01_casos_acumulados.png)
 
 ![](imagenes/02_nuevos_casos.png)
@@ -39,7 +41,7 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 ![](imagenes/09_casos_acumulados_international.png)
 
-# 4. Errores de fuente
+# 4. Errores de la base
 
 ## Tabla de positivos
 
@@ -47,14 +49,16 @@ Las tablas de la Secretaria de Salud reportan diariamente las tablas de casos po
 
    - En la tabla del 20.03.2020 se marco el **caso 163** como caso nuevo, sin embargo este caso esta confirmado en la tabla del 19.03.2020 (**caso 149**)
    - La tabla del 21-03-2020 no reporta en azul, es decir como casos nuevos, los **casos 226, 227, 228, 229**, pero estos casos no se encuentran en la tabla del 20.03.2020. Además, en la tabla del 20.03.2020 se reporta el **caso 225**, que *desaparece* en la tabla del 21.03.2020.
+   - En la tabla del 26.03.2020 ya no se encontró el **caso 302** de la tabla del 25.06.2020.
+   - En la tabla del 27.03.2020 ya no se encontró el **caso 339** de la tabla del 25.06.2020.
 
 ### Actulizaciones de casos
 
    - En la tabla del 20.03.2020 se actualizó el número de caso 67
    - En la tabla 21.03.2020 se actualizó el número de caso 64
-   - La tabla del 23.03.2020 se actualizaron los *países de procedencia* de los casos 167, 143, 311 y la *edad* del caso 311
+   - La tabla del 23.03.2020 actualizó los *países de procedencia* de los casos 143, 167, 311 y la *edad* del caso *287*
    - En 
-   la tabla del 24.03.2020 se actualizo la edad del caso *253*
-   - En la tabla 26.03.2020 se actualizo el *país de procedencia* para el caso *201*, para el caso *240* se actualizo la *edad*. Posibles defunciones: casos 340 y 302 de la tabla 25.06.2020
-   - La tabla del 27.03.2020 se actualizo el *país de procedencia* del caso *212*
+   la tabla del 24.03.2020 actualizó la edad del caso *253* y el país de residencia de caso *368*
+   - En la tabla 26.03.2020 actualizó el *país de procedencia* para el caso *201*, para el caso *240* se actualizo la *edad*
+   - La tabla del 27.03.2020 actualizó el *país de procedencia* del caso *211*
    
