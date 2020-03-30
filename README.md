@@ -21,7 +21,7 @@ Siguiendo las propuestas de varios actores de la sociedad civil, ponemos a dispo
 
 # 3. Análisis
 
-### NOTA: La Secretaría de Salud ha estado eliminando, sin motivo aparente, diversos registros. Por lo que los datos publicados aquí no coinciden con los números oficiales. 
+### NOTA: La Secretaría de Salud ha estado eliminando, sin motivo aparente, diversos registros. Por lo que los números de casos positivos publicados aquí no coinciden con los números oficiales, a partir del 26 de marzo. Consultar la sección 4 para más información.
 
 ![](imagenes/01_casos_acumulados.png)
 
