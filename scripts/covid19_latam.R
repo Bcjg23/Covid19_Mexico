@@ -40,7 +40,7 @@ d_ends <- df_latam %>% group_by(Country) %>% top_n(1, ConfirmedCases) %>% pull(C
 ##
 fecha_actualizacion <- str_sub(max(df_latam$ConfirmedCases), end = -1)
 
-total_cases = df_latam %>% filter(Date=="2020-03-28") %>% select(ConfirmedCases) %>% sum()
+total_cases = df_latam %>% filter(Date=="2020-03-29") %>% select(ConfirmedCases) %>% sum()
 
 # Plot LATAM
 ggplot(df_latam, aes(x = Date, y = ConfirmedCases,color = Country)) + 
@@ -78,7 +78,7 @@ df_international <- df %>% filter(Country %in% c("Mexico","Brazil","China","US",
 d_ends <- df_international %>% group_by(Country) %>% top_n(1, ConfirmedCases) %>% pull(ConfirmedCases)
 ##
 fecha_actualizacion <- str_sub(max(df_international$ConfirmedCases), end = -1)
-total_cases = df_international %>% filter(Date=="2020-03-28") %>% select(ConfirmedCases) %>% sum()
+total_cases = df_international %>% filter(Date=="2020-03-29") %>% select(ConfirmedCases) %>% sum()
 
 
 # Plot LATAM
