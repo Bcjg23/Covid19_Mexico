@@ -24,7 +24,7 @@ df <-read_csv(url(urlfile))
 ## Reordenamos los datos para las graficas
 df <- df %>% select(-c(Lat,Long,`Province/State`)) %>% group_by(`Country/Region`) %>% summarise_all(funs(sum))
 ## Alargamos la tabla por Pais
-df <-gather(df, `1/22/20`:`3/30/20`,key='Fecha',value=ConfirmedCases)
+df <-gather(df, `1/22/20`:`3/31/20`,key='Fecha',value=ConfirmedCases)
 ## Renombramos columna
 df <- rename(df, Country=`Country/Region` )
 ## Transformamos la columna al formato de fecha adecuado
@@ -34,13 +34,13 @@ df$Date <-  mdy(df$Fecha)
 ## Paises para del comparativo
 df_latam <- df %>% filter(Country %in% c("Mexico","Colombia","Chile","Argentina","Brazil","Peru","Ecuador"))
 ## Filtro de fechas
-df_latam <- df_latam %>% filter(Date>='2020-03-15')
+df_latam <- df_latam %>% filter(Date>='2020-03-2')
 ## Etiquetas para el final de las series de tiempo
 d_ends <- df_latam %>% group_by(Country) %>% top_n(1, ConfirmedCases) %>% pull(ConfirmedCases)
 ##
 fecha_actualizacion <- str_sub(max(df_latam$ConfirmedCases), end = -1)
 
-total_cases = df_latam %>% filter(Date=="2020-03-30") %>% select(ConfirmedCases) %>% sum()
+total_cases = df_latam %>% filter(Date==max(Date)) %>% select(ConfirmedCases) %>% sum()
 
 # Plot LATAM
 ggplot(df_latam, aes(x = Date, y = ConfirmedCases,color = Country)) + 
