@@ -51,6 +51,11 @@ Las tablas de la Secretaria de Salud reportan diariamente las tablas de casos po
    - La tabla del 21-03-2020 no reporta en azul, es decir como casos nuevos, los **casos 226, 227, 228, 229**, pero estos casos no se encuentran en la tabla del 20.03.2020. Además, en la tabla del 20.03.2020 se reporta el **caso 225**, que *desaparece* en la tabla del 21.03.2020.
    - En la tabla del 26.03.2020 ya no se encontró el **caso 302** de la tabla del 25.06.2020.
    - En la tabla del 27.03.2020 ya no se encontró el **caso 339** de la tabla del 25.06.2020.
+   - La tabla del 31.03.2020 no reporta como nuevo al **caso 220** de la misma tabla.
+   - La tabla del 01.04.2020 eliminó los casos **642, 643, 653, 1184** de la tabla del 31.03.2020
+   - La tabla del 02.04.2020 eliminó los casos **642** y **645** de la tabla del 01.04.2020
+   - La tabla del 03.04.2020 eliminó el caso **156** de la tabla del 02.04.2020
+ 
 
 ### Actulizaciones de casos
 
@@ -61,4 +66,7 @@ Las tablas de la Secretaria de Salud reportan diariamente las tablas de casos po
    la tabla del 24.03.2020 actualizó la edad del caso *253* y el país de residencia de caso *368*
    - En la tabla 26.03.2020 actualizó el *país de procedencia* para el caso *201*, para el caso *240* se actualizo la *edad*
    - La tabla del 27.03.2020 actualizó el *país de procedencia* del caso *211*
+   - La tabla del  31.03.2020 actualizó las edades de los casos *893* y *1066*
+   - La tabla del 03.04.2020 actualizo el *sexo* del caso *629*
+   
    
